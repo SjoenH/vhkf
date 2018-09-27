@@ -6,7 +6,7 @@ webpackJsonp([9],{
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditConcertPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,15 +18,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the EditConcertPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var EditConcertPage = (function () {
-    function EditConcertPage(navCtrl, navParams, viewCtrl) {
-        this.navCtrl = navCtrl;
+    function EditConcertPage(navParams, viewCtrl) {
         this.navParams = navParams;
         this.viewCtrl = viewCtrl;
         var concert = navParams.get('concert');
@@ -39,8 +32,6 @@ var EditConcertPage = (function () {
         this.totalNumberOfTickets = concert.totalNumberOfTickets;
         this.imgURL = concert.imgURL;
     }
-    EditConcertPage.prototype.ionViewDidLoad = function () {
-    };
     EditConcertPage.prototype.save = function () {
         console.log("Saving changes");
         var concert = {
@@ -65,7 +56,7 @@ EditConcertPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-edit-concert',template:/*ion-inline-start:"/home/henry/Documents/GitHub/Huskonsertfestivalen-App/src/pages/edit-concert/edit-concert.html"*/'<!--\n  Generated template for the EditConcertPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Endre konsert</ion-title>\n    <ion-buttons right>\n      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content >\n    <ion-list no-lines>\n\n            <ion-item>\n              <ion-label floating>Tittel</ion-label>\n              <ion-input [(ngModel)]="title" type="text"></ion-input>\n            </ion-item>\n\n            <ion-item>\n              <ion-label floating>Beskrivelse</ion-label>\n              <ion-textarea [(ngModel)]="description"></ion-textarea>\n            </ion-item>\n            <ion-item>\n                <ion-label floating>Sted</ion-label>\n                <ion-input [(ngModel)]="location" type="text"></ion-input>\n            </ion-item>\n            <ion-item>\n              <ion-label floating>Totalt antall billetter</ion-label>\n              <ion-input type="number" [(ngModel)]="totalNumberOfTickets"></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-label floating>Bildeadresse</ion-label>\n                <ion-input [(ngModel)]="imgURL" type="text"></ion-input>\n            </ion-item>\n            <br>\n            <ion-item>\n              <ion-label>Dato</ion-label>\n              <ion-datetime displayFormat="MMM DD, YYYY HH:mm" min="2017" max="2017-10-31" [(ngModel)]="datetime"></ion-datetime>\n              <p>Det er en bug i input, venligst sett tiden til en time før faktisk tid.</p>\n            </ion-item>\n\n          </ion-list>\n          <p>Det er en bug i input, venligst sett tiden til en time før faktisk tid.</p>\n          <button ion-button full color="secondary" (click)="save()">Save</button>\n          <!-- <button ion-button full color="danger" (click)="delete()">Remove</button> -->\n</ion-content>\n'/*ion-inline-end:"/home/henry/Documents/GitHub/Huskonsertfestivalen-App/src/pages/edit-concert/edit-concert.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ViewController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ViewController */]])
 ], EditConcertPage);
 
 //# sourceMappingURL=edit-concert.js.map
@@ -78,7 +69,7 @@ EditConcertPage = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddConcertPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -134,7 +125,7 @@ AddConcertPage = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConcertsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__concert_detail_concert_detail__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__add_concert_add_concert__ = __webpack_require__(104);
@@ -154,12 +145,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
 var ConcertsPage = (function () {
-    function ConcertsPage(navCtrl, navParams, concertService, modalCtr, alertCtrl, storage) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
+    function ConcertsPage(concertService, modalCtr, alertCtrl, storage) {
         this.concertService = concertService;
         this.modalCtr = modalCtr;
         this.alertCtrl = alertCtrl;
@@ -173,12 +160,10 @@ var ConcertsPage = (function () {
         // If user.name is null then show a warning telling "you need to provide a name"
         if (user.name != null) {
             this.user.firstTime = false;
-            //  TODO: Store user to localstorage and in Database
             this.concertService.addUser(user).then(function (res) {
                 _this.user._id = res;
             });
         }
-        ;
     };
     ConcertsPage.prototype.updateUser = function () {
         var _this = this;
@@ -193,14 +178,16 @@ var ConcertsPage = (function () {
     ConcertsPage.prototype.goToSlide = function (number) {
         this.slides.slideTo(number, 500);
     };
+    // noinspection JSUnusedGlobalSymbols
     ConcertsPage.prototype.ionViewWillEnter = function () {
         // console.log('ionViewDidLoad ConcertsPage');
+        // noinspection JSIgnoredPromiseFromCall
         this.getConcerts();
         this.updateUser();
     };
     ConcertsPage.prototype.doRefresh = function (refresher) {
         this.updateUser();
-        this.getConcerts().then(function (res) {
+        this.getConcerts().then(function () {
             refresher.complete();
         });
     };
@@ -225,6 +212,7 @@ var ConcertsPage = (function () {
                     concert._id = id;
                 });
                 _this.concerts.push(concert);
+                // noinspection JSIgnoredPromiseFromCall
                 _this.getConcerts();
             }
         });
@@ -273,8 +261,8 @@ var ConcertsPage = (function () {
     ConcertsPage.prototype.itemSelected = function (concert) {
         var _this = this;
         var modal = this.modalCtr.create(__WEBPACK_IMPORTED_MODULE_3__concert_detail_concert_detail__["a" /* ConcertDetailPage */], { concert: concert });
-        var oldConcert = concert;
-        modal.onDidDismiss(function (concert) {
+        modal.onDidDismiss(function () {
+            // noinspection JSIgnoredPromiseFromCall
             _this.getConcerts();
         });
         modal.present();
@@ -288,11 +276,9 @@ __decorate([
 ConcertsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-concerts',template:/*ion-inline-start:"/home/henry/Documents/GitHub/Huskonsertfestivalen-App/src/pages/concerts/concerts.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      <!-- <img src="../assets/logo.svg" height="70pt" width="100%"/> -->\n      Vorrå Huskonsertfestival\n    </ion-title>\n    <ion-buttons *ngIf="user.admin" right>\n      <button ion-button outline color="primary" (click)="addConcert()">+ Ny event</button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="background">\n  <ion-slides *ngIf=\'user.firstTime\' pager>\n    <ion-slide style="background-color: rgba(255,255,255,0.9)" >\n      <h2>Velkommen til Vorrå Huskonsertfestival!</h2>\n      <p>For å sikre deg plass på konserten må du huske å reservere billett her i app-en.</p>\n      <button ion-button (click)="goToSlide(1)">Neste</button>\n    </ion-slide>\n\n    <ion-slide style="background-color: rgba(255,255,255,0.9)">\n      <h2>For at vi skal kunne holde av billetter til deg, må vi vite hvem du er</h2>\n      <p><br></p>\n      <input type="text" placeholder="Navn Navnesen" [(ngModel)]=\'user.name\'/>\n      <button ion-button (click)="goToSlide(2)">Neste</button>\n    </ion-slide>\n\n    <ion-slide style="background-color: rgba(255,255,255,0.9)">\n      <span *ngIf=\'user.name\'>\n        <h2>Hei på deg, {{user.name}}!</h2>\n        <p>Du kan nå bla gjennom alle konsertene og reservere deg billett til det du vil få med deg.</p>\n        <p>Din 1. og 2. konsert får du for 150 kroner. (Barn 100)</p>\n        <p>Din 3. konsert får du for 100 kroner. (Barn 50)</p>\n        <p>Din 4. konsert er gratis!</p>\n\n        <p>Du må huske å reservere de konsertene du skal gå på. Det er desverre begrenset med plass i hvert hus.</p>\n        <button ion-button (click)=\'closeIntro(user)\'>Supert! Vis meg konsertene <ion-icon icon-right\n                                                                                           name=\'thumbs-up\'></ion-icon></button>\n      </span>\n      <span *ngIf=\'!user.name\'>\n        <h2>Du har glemt å oppgi et navn...</h2>\n        <button ion-button (click)=\'goToSlide(1)\'>Oisann!</button>\n      </span>\n    </ion-slide>\n  </ion-slides>\n  <span *ngIf=\'!user.firstTime\'>\n          <ion-refresher (ionRefresh)="doRefresh($event)">\n            <ion-refresher-content></ion-refresher-content>\n          </ion-refresher>\n          <ion-spinner *ngIf=\'loading\'></ion-spinner>\n          <ion-list no-lines>\n            <ion-item-sliding *ngFor="let concert of concerts">\n              <ion-item>\n                <ion-card (click)="itemSelected(concert)">\n                  <img src={{concert.imgURL}}/>\n                  <div class="card-title">{{concert.title}}</div>\n                  <div class="card-subtitle">\n                    <ion-icon name="pin"> {{concert.location}}\n                  </ion-icon>\n                  </div>\n                </ion-card>\n              </ion-item>\n\n              <!-- Swipe to delete function -->\n              <ion-item-options *ngIf="user.admin">\n                <button ion-button color="danger" (click)="presentConfirmDelete(concert)">\n                  <ion-icon name="trash"></ion-icon>\n                  Delete\n                </button>\n              </ion-item-options>\n            </ion-item-sliding>\n          </ion-list>\n\n  </span>\n</ion-content>\n'/*ion-inline-end:"/home/henry/Documents/GitHub/Huskonsertfestivalen-App/src/pages/concerts/concerts.html"*/,
+        selector: 'page-concerts',template:/*ion-inline-start:"/home/henry/Documents/GitHub/Huskonsertfestivalen-App/src/pages/concerts/concerts.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n       <!--<img src="../assets/logo.svg" height="70pt" width="100%"/>-->\n      Vorrå Huskonsertfestival\n    </ion-title>\n    <ion-buttons *ngIf="user.admin" right>\n      <button ion-button outline color="primary" (click)="addConcert()">+ Ny event</button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="background">\n  <ion-slides *ngIf=\'user.firstTime\' pager>\n    <ion-slide style="background-color: rgba(255,255,255,0.9)">\n      <h2>Velkommen til Vorrå Huskonsertfestival!</h2>\n      <p>For å sikre deg plass på konserten må du huske å reservere billett her i app-en.</p>\n      <button ion-button (click)="goToSlide(1)">Neste</button>\n    </ion-slide>\n\n    <ion-slide style="background-color: rgba(255,255,255,0.9)">\n      <h2>For at vi skal kunne holde av billetter til deg, må vi vite hvem du er</h2>\n      <p><br></p>\n      <input type="text" placeholder="Navn Navnesen" [(ngModel)]=\'user.name\'/>\n      <button ion-button (click)="goToSlide(2)">Neste</button>\n    </ion-slide>\n\n    <ion-slide style="background-color: rgba(255,255,255,0.9)">\n      <span *ngIf=\'user.name\'>\n        <h2>Hei på deg, {{user.name}}!</h2>\n        <p>Du kan nå bla gjennom alle konsertene og reservere billetter.</p>\n\n        <p>Din 1. og 2. konsert får du for 150 kroner. (Barn 100)</p>\n        <p>Din 3. konsert får du for 100 kroner. (Barn 50)</p>\n        <p>Din 4. konsert er gratis!</p>\n\n        <p>Du må huske å reservere de konsertene du skal gå på. Det er dessverre begrenset med plass i hvert hus.</p>\n        <button ion-button (click)=\'closeIntro(user)\'>Supert! Vis meg konsertene <ion-icon icon-right\n                                                                                           name=\'thumbs-up\'></ion-icon></button>\n      </span>\n      <span *ngIf=\'!user.name\'>\n        <h2>Du har glemt å oppgi et navn...</h2>\n        <button ion-button (click)=\'goToSlide(1)\'>Oisann!</button>\n      </span>\n    </ion-slide>\n  </ion-slides>\n  <span *ngIf=\'!user.firstTime\'>\n          <ion-refresher (ionRefresh)="doRefresh($event)">\n            <ion-refresher-content></ion-refresher-content>\n          </ion-refresher>\n          <ion-spinner *ngIf=\'loading\'></ion-spinner>\n          <ion-list no-lines>\n            <ion-item-sliding *ngFor="let concert of concerts">\n              <ion-item>\n                <ion-card (click)="itemSelected(concert)">\n                  <img src={{concert.imgURL}}/>\n                  <div class="card-title">{{concert.title}}</div>\n                  <div class="card-subtitle">\n                    <ion-icon name="pin"> {{concert.location}}\n                  </ion-icon>\n                  </div>\n                </ion-card>\n              </ion-item>\n\n              <!-- Swipe to delete function -->\n              <ion-item-options *ngIf="user.admin">\n                <button ion-button color="danger" (click)="presentConfirmDelete(concert)">\n                  <ion-icon name="trash"></ion-icon>\n                  Delete\n                </button>\n              </ion-item-options>\n            </ion-item-sliding>\n          </ion-list>\n  </span>\n</ion-content>\n'/*ion-inline-end:"/home/henry/Documents/GitHub/Huskonsertfestivalen-App/src/pages/concerts/concerts.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_5__providers_concerts_concerts__["a" /* ConcertsProvider */],
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__providers_concerts_concerts__["a" /* ConcertsProvider */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */],
         __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
@@ -308,7 +294,7 @@ ConcertsPage = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TicketsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_concerts_concerts__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__concert_detail_concert_detail__ = __webpack_require__(50);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -331,9 +317,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * on Ionic pages and navigation.
  */
 var TicketsPage = (function () {
-    function TicketsPage(navCtrl, navParams, modalCtr, concertService) {
+    function TicketsPage(navCtrl, modalCtr, concertService) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
         this.modalCtr = modalCtr;
         this.concertService = concertService;
         this.user = {};
@@ -363,7 +348,7 @@ var TicketsPage = (function () {
             _this.makeUserConcerts();
         });
     };
-    TicketsPage.prototype.ionViewDidLoad = function () { }; //only fires once...
+    // noinspection JSUnusedGlobalSymbols
     TicketsPage.prototype.ionViewWillEnter = function () {
         var _this = this;
         this.updateUser();
@@ -376,13 +361,9 @@ var TicketsPage = (function () {
         var modal = this.modalCtr.create(__WEBPACK_IMPORTED_MODULE_3__concert_detail_concert_detail__["a" /* ConcertDetailPage */], {
             concert: concert
         });
-        var oldConcert = concert;
-        modal.onDidDismiss(function (concert) {
-            // this.getConcerts();
+        modal.onDidDismiss(function () {
         });
         modal.present();
-    };
-    TicketsPage.prototype.goToMottak = function () {
     };
     TicketsPage.prototype.goToUserAdminPage = function () {
         this.navCtrl.push('UserAdminPage');
@@ -395,7 +376,6 @@ TicketsPage = __decorate([
         selector: 'page-tickets',template:/*ion-inline-start:"/home/henry/Documents/GitHub/Huskonsertfestivalen-App/src/pages/tickets/tickets.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Vorrå Huskonsertfestival</ion-title>\n    <ion-buttons *ngIf="user.admin" right>\n      <button ion-button outline color="primary" (click)="goToUserAdminPage()">User Admin</button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="background">\n  <ion-card>\n    <ion-card-header>\n      <h1>{{user.name}}</h1>\n    </ion-card-header>\n    <ion-card-content>\n      Her listes alle dine billettreservasjoner. <br> Dersom det skulle være noen problemer eller spørsmål, ta kontakt med\n      Henry.\n      <ion-icon name="call" item-left></ion-icon>\n      <a href="tel:+47 984 36 185">\n          984 36 185\n        </a>\n      <hr>\n      <ion-item *ngFor=\'let concert of allConcerts\'>\n        <ion-label><b>{{concert.title}}:</b> {{concert.number}} <span *ngIf=\'concert.number == 1\'>Billett</span><span *ngIf=\'concert.number == 0 || concert.number > 1\'>Billetter</span></ion-label>\n      </ion-item>\n\n    </ion-card-content>\n  </ion-card>\n  <ion-list no-lines>\n    <ion-item *ngFor="let concert of concerts">\n      <ion-card class="ticket" (click)="itemSelected(concert)">\n        <img src={{concert.imgURL}} />\n        <div class="card-title">{{concert.title}}</div>\n      </ion-card>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/home/henry/Documents/GitHub/Huskonsertfestivalen-App/src/pages/tickets/tickets.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */],
         __WEBPACK_IMPORTED_MODULE_2__providers_concerts_concerts__["a" /* ConcertsProvider */]])
 ], TicketsPage);
@@ -536,7 +516,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(264);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_concerts_concerts__ = __webpack_require__(105);
@@ -636,7 +616,7 @@ AppModule = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(201);
@@ -697,12 +677,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/*
-  Generated class for the AuthServiceProvider provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular DI.
-*/
 var server_url = "https://infinite-citadel-36156.herokuapp.com";
 var AuthServiceProvider = (function () {
     function AuthServiceProvider(http) {
@@ -797,6 +771,9 @@ var ConcertsProvider = (function () {
             });
         });
     };
+    /**
+     * Get current user from database. Returns a empty mock-user if no user available.
+     */
     ConcertsProvider.prototype.getUser = function () {
         var _this = this;
         return new Promise(function (resolve) {
@@ -937,11 +914,11 @@ var ConcertsProvider = (function () {
             _this.getUsersWithTicketToConcert(concert_id).then(function (res) {
                 var numberOfTickets = 0;
                 for (var user in res) {
-                    for (var concert in res[user].concerts) {
-                        if (res[user].concerts[concert] == concert_id) {
+                    res[user].concerts.forEach(function (user_concert_id) {
+                        if (user_concert_id == concert_id) {
                             numberOfTickets += 1;
                         }
-                    }
+                    });
                 }
                 console.log('getNumberOfReservedTickets', numberOfTickets);
                 resolve(numberOfTickets);
@@ -953,7 +930,7 @@ var ConcertsProvider = (function () {
         return new Promise(function (resolve) {
             _this.getNumberOfReservedTickets(concert._id).then(function (res) {
                 var total = concert.totalNumberOfTickets;
-                var reserved = res;
+                // const reserved: any = res;
                 var sum = total - Number(res);
                 resolve(sum);
             });
@@ -982,7 +959,7 @@ var ConcertsProvider = (function () {
             console.log(res.json());
         });
     };
-    ConcertsProvider.prototype.deletUser = function (id) {
+    ConcertsProvider.prototype.deleteUser = function (id) {
         this.http.delete(this.server_url + '/api/users/' + id)
             .subscribe(function (res) {
             console.log(res.json());
@@ -1005,7 +982,7 @@ ConcertsProvider = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConcertDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_concert_edit_concert__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_concerts_concerts__ = __webpack_require__(39);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1032,12 +1009,20 @@ var ConcertDetailPage = (function () {
         this.viewCtrl = viewCtrl;
         this.user = {};
         this.concert = navParams.get('concert');
-        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+        var options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        };
         this.concertDateTime = new Date(this.concert.datetime).toLocaleString('NO', options);
         concertService.getUser().then(function (res) {
             _this.user = res;
         });
     }
+    // noinspection JSUnusedGlobalSymbols
     ConcertDetailPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ConcertDetailPage');
         console.log(this.concert);
@@ -1062,15 +1047,11 @@ var ConcertDetailPage = (function () {
     };
     ConcertDetailPage.prototype.reserveConcert = function (concert) {
         var _this = this;
+        this.concert = concert;
         var prompt = this.alertCtrl.create({
             title: 'Reserver',
             message: "Hvor mange billetter vil du reservere?",
             inputs: [
-                // {
-                //   name: 'username',
-                //   placeholder: 'Reservasjonsnavn',
-                //   type: 'text'
-                // },
                 {
                     name: 'antall',
                     placeholder: "Antall billetter",
@@ -1080,7 +1061,7 @@ var ConcertDetailPage = (function () {
             buttons: [
                 {
                     text: 'Avbryt',
-                    handler: function (data) {
+                    handler: function () {
                         console.log('Cancel clicked');
                     }
                 },

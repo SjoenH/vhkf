@@ -7,7 +7,7 @@ webpackJsonp([1],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserAdminPageModule", function() { return UserAdminPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_admin__ = __webpack_require__(285);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -44,7 +44,7 @@ UserAdminPageModule = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserAdminPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_concerts_concerts__ = __webpack_require__(39);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -58,19 +58,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the UserAdminPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var UserAdminPage = (function () {
-    function UserAdminPage(navCtrl, navParams, concertService, alertCtrl) {
+    function UserAdminPage(navCtrl, concertService, alertCtrl) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
         this.concertService = concertService;
         this.alertCtrl = alertCtrl;
     }
+    // noinspection JSUnusedGlobalSymbols
     UserAdminPage.prototype.ionViewDidLoad = function () {
         this.refreshData();
     };
@@ -99,7 +93,7 @@ var UserAdminPage = (function () {
             buttons: [
                 {
                     text: 'Cancel',
-                    handler: function (data) {
+                    handler: function () {
                         console.log('Cancel clicked');
                     }
                 },
@@ -145,7 +139,7 @@ var UserAdminPage = (function () {
     };
     UserAdminPage.prototype.deleteUser = function (user) {
         // TODO: implement
-        this.concertService.deletUser(user._id);
+        this.concertService.deleteUser(user._id);
         this.refreshData();
     };
     return UserAdminPage;
@@ -155,7 +149,7 @@ UserAdminPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-user-admin',template:/*ion-inline-start:"/home/henry/Documents/GitHub/Huskonsertfestivalen-App/src/pages/user-admin/user-admin.html"*/'<!--\n  Generated template for the UserAdminPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>BrukerAdministrasjon</ion-title>\n    <ion-buttons right>\n      <button ion-button outline color="primary" (click)="newUser()">Ny bruker</button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n    <ion-refresher (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content></ion-refresher-content>\n      </ion-refresher>\n  <ion-item-divider color="light">Users</ion-item-divider>\n  <ion-list>\n    <ion-item-sliding *ngFor=\'let user of users\'>\n      <ion-item (click)=\'goToUserAdminDetailPage(user)\'>{{user.name}} | {{user.concerts.length}} Billetter <span *ngIf=\'user.admin\'>| ADMINISTRATOR</span> </ion-item>\n\n      <ion-item-options>\n        <button ion-button color="danger" (click)=\'presentConfirmDelete(user)\'>\n          <ion-icon name="trash"></ion-icon>\n          Delete\n        </button>\n      </ion-item-options>\n    </ion-item-sliding>\n\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/home/henry/Documents/GitHub/Huskonsertfestivalen-App/src/pages/user-admin/user-admin.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_concerts_concerts__["a" /* ConcertsProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_concerts_concerts__["a" /* ConcertsProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
 ], UserAdminPage);
 
 //# sourceMappingURL=user-admin.js.map

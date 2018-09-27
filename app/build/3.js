@@ -7,7 +7,7 @@ webpackJsonp([3],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditUserPageModule", function() { return EditUserPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_user__ = __webpack_require__(283);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -44,7 +44,7 @@ EditUserPageModule = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditUserPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_concerts_concerts__ = __webpack_require__(39);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -58,15 +58,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the EditUserPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var EditUserPage = (function () {
-    function EditUserPage(navCtrl, navParams, alertCtrl, concertService, toastCtrl) {
-        this.navCtrl = navCtrl;
+    function EditUserPage(navParams, alertCtrl, concertService, toastCtrl) {
         this.navParams = navParams;
         this.alertCtrl = alertCtrl;
         this.concertService = concertService;
@@ -98,7 +91,8 @@ var EditUserPage = (function () {
             }
         });
     };
-    EditUserPage.prototype.ionViewDidLoad = function () {
+    // noinspection JSUnusedGlobalSymbols
+    EditUserPage.ionViewDidLoad = function () {
         console.log('ionViewDidLoad EditUserPage');
     };
     EditUserPage.prototype.saveChanges = function () {
@@ -114,7 +108,7 @@ var EditUserPage = (function () {
             }
         }
         console.log(this.user);
-        this.concertService.updateUser(this.user._id, this.user).then(function (res) {
+        this.concertService.updateUser(this.user._id, this.user).then(function () {
             _this.presentToast();
         });
     };
@@ -132,8 +126,7 @@ EditUserPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-edit-user',template:/*ion-inline-start:"/home/henry/Documents/GitHub/Huskonsertfestivalen-App/src/pages/edit-user/edit-user.html"*/'<!--\n  Generated template for the EditUserPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>editUser</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n\n    <ion-item>\n      <ion-label fixed>Navn</ion-label>\n      <ion-input [(ngModel)]="user.name" type="text"></ion-input>\n    </ion-item>\n  </ion-list>\n  <!-- <ion-item-divider>Konserter:</ion-item-divider> -->\n  <ion-item-group>\n    <ion-item *ngFor=\'let concert of concerts\'>\n      <ion-label>{{concert.title}} ({{concert.availableTickets}}*)</ion-label>\n      <ion-input [(ngModel)]=\'concert.number\' type=\'number\'></ion-input>\n    </ion-item>\n  </ion-item-group>\n\n  <ion-item-group>\n    <ion-item>\n      <ion-label fixed>Betalt Totalt*</ion-label>\n      <ion-input [(ngModel)]=\'user.moneyPayed\' type="number"></ion-input>\n    </ion-item>\n    <ion-item-divider>*antall tilgjengelige billetter <br>**Hvor mye har denne personen betalt?</ion-item-divider>\n  </ion-item-group>\n  <button ion-button full color=\'primary\' (click)=\'saveChanges()\'>Lagre endringer</button>\n  <ion-item-group>\n    <ion-item>\n      <ion-label>Administrator</ion-label>\n      <ion-checkbox color="dark" [(ngModel)]=\'user.admin\'></ion-checkbox>\n    </ion-item>\n  </ion-item-group>\n</ion-content>'/*ion-inline-end:"/home/henry/Documents/GitHub/Huskonsertfestivalen-App/src/pages/edit-user/edit-user.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */],
         __WEBPACK_IMPORTED_MODULE_2__providers_concerts_concerts__["a" /* ConcertsProvider */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */]])

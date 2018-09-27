@@ -7,7 +7,7 @@ webpackJsonp([0],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserTicketsPageModule", function() { return UserTicketsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_tickets__ = __webpack_require__(286);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -44,7 +44,7 @@ UserTicketsPageModule = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserTicketsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,12 +56,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the UserTicketsPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var UserTicketsPage = (function () {
     function UserTicketsPage(navCtrl, navParams, actionSheetCtrl) {
         this.navCtrl = navCtrl;
@@ -70,38 +64,8 @@ var UserTicketsPage = (function () {
         this.user = navParams.get('user');
         console.log(this.user);
     }
-    UserTicketsPage.prototype.ionViewDidLoad = function () {
+    UserTicketsPage.ionViewDidLoad = function () {
         console.log('ionViewDidLoad UserTicketsPage');
-    };
-    UserTicketsPage.prototype.presentActionSheet = function (ticket) {
-        var _this = this;
-        var actionSheet = this.actionSheetCtrl.create({
-            title: 'Modify your ' + ticket + '.',
-            buttons: [
-                {
-                    text: 'Destructive',
-                    role: 'destructive',
-                    handler: function () {
-                        console.log('Destructive clicked');
-                        var index = _this.user.concerts.indexOf(ticket);
-                        _this.user.concerts.splice(index, 1);
-                        console.log(_this.user);
-                    }
-                }, {
-                    text: 'Archive',
-                    handler: function () {
-                        console.log('Archive clicked');
-                    }
-                }, {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: function () {
-                        console.log('Cancel clicked');
-                    }
-                }
-            ]
-        });
-        actionSheet.present();
     };
     return UserTicketsPage;
 }());
