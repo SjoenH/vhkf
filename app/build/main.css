@@ -25214,9 +25214,12 @@ ion-navbar.toolbar {
 }
 
 page-concerts ion-card {
+  display: inline-block;
   position: relative;
   text-align: center;
   opacity: 0.98;
+  max-width: 400px;
+  max-height: 300px;
 }
 
 page-concerts .card-title {
