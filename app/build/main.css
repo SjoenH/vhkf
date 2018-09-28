@@ -25228,7 +25228,7 @@ page-concerts .card-title {
   width: 100%;
   font-weight: bold;
   color: #fff;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 2px 2px 2px black;
 }
 
 page-concerts .card-subtitle {
@@ -25237,7 +25237,7 @@ page-concerts .card-subtitle {
   top: 52%;
   width: 100%;
   color: #fff;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 2px 2px 2px black;
   padding-top: 40px;
 }
 
