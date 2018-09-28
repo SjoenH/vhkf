@@ -25217,7 +25217,6 @@ page-concerts ion-card {
   display: inline-block;
   position: relative;
   text-align: center;
-  opacity: 0.98;
   max-width: 400px;
   max-height: 300px;
 }
@@ -25239,6 +25238,7 @@ page-concerts .card-subtitle {
   width: 100%;
   color: #fff;
   text-shadow: 1px 1px 2px black;
+  padding-top: 40px;
 }
 
 page-tickets ion-card.ticket {
