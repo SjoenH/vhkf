@@ -25213,6 +25213,12 @@ ion-navbar.toolbar {
   }
 }
 
+page-concert-detail img {
+  max-height: 40vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 page-concerts ion-card {
   display: inline-block;
   position: relative;
