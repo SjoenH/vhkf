@@ -1,4 +1,4 @@
-img {
+body > div.container-fluid.pt-4 > div.container.d-flex.flex-column > div > img {
     margin-right: 20px;
     margin-bottom: 20px;
     margin-top: 5px;
