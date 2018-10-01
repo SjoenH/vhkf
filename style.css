@@ -6,3 +6,7 @@ body > div.flex-column > div > img {
     width: 40%;
     max-width: 300px;
 }
+
+body {
+    min-width: 500px;
+}
