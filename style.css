@@ -3,10 +3,10 @@ body > div.flex-column > div > img {
     margin-bottom: 20px;
     margin-top: 5px;
     float: left;
-    width: 40%;
+    width: 90%;
     max-width: 300px;
 }
 
 body {
-    min-width: 500px;
+    min-width: available;
 }
